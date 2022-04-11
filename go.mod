@@ -1,4 +1,4 @@
-module ast_set
+module github.com/fobus1289/go-genadi
 
 go 1.17
 

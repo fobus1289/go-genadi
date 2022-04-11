@@ -1,7 +1,7 @@
 package controller
 
 import (
-	"ast_set/app/service"
+	"github.com/fobus1289/go-genadi/app/service"
 	"math/rand"
 	"net/http"
 	"strconv"

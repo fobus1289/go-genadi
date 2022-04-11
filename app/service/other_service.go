@@ -1,6 +1,6 @@
 package service
 
-import "ast_set/config"
+import "github.com/fobus1289/go-genadi/config"
 
 //MainService @Service
 type MainService struct {

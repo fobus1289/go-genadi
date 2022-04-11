@@ -1,10 +1,10 @@
 package main
 
 import (
-	"ast_set/gen"
 	"bytes"
 	_ "embed"
 	"fmt"
+	"github.com/fobus1289/go-genadi/gen"
 	"go/ast"
 	"go/parser"
 	"go/printer"
