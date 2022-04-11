@@ -1,0 +1,45 @@
+package router
+
+var (
+	{{.GetConfigure}}
+)
+
+var (
+	{{.MakeServices}}
+)
+
+var (
+	{{.MakeControllers}}
+)
+
+
+var (
+	{{.MakeActionPattern}}
+)
+
+func NewServer() *Server {
+    {{.GetServicesParams}}
+	return &Server{
+		Routers: []*Router{},
+	}
+}
+
+type Router struct {
+	path   string
+	Method string
+	match  *regexp.Regexp
+}
+
+type Server struct {
+	Routers []*Router
+}
+
+func (s *Server) ServeHTTP(responseWriter http.ResponseWriter, request *http.Request) {
+
+	switch request.Method {
+		{{.GetMethods}}
+		default:
+		http.NotFound(responseWriter, request)
+	}
+
+}
